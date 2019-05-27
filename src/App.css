@@ -1,0 +1,43 @@
+@import '~antd/dist/antd.css';
+.logo{
+  background: rgba(255, 255, 255, 0.2);
+  width: 126px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+.app{
+  width: 100%;
+  height: 100%;
+
+}
+.layout{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.login-header{
+  float: right;
+  color: #fff;
+}
+.ant-layout-content{
+  display: flex;
+}
+.ant-layout.ant-layout-has-sider{
+  flex-direction: column;
+}
+.reset{
+  color: #fff;
+}
+.reser:hover{
+  color: #fff;
+}
+.ant-layout-sider{
+  position: fixed;
+  height: 100%;
+}
+.component-box{
+  padding-left: 200px;
+  box-sizing: border-box;
+  width: 100%;
+}

@@ -15,11 +15,11 @@ class Home extends Component {
 		console.log(index)
 	}
 	componentDidMount(){
-	 console.log(this.props)
-//  this.props.dispatch({
-// 				type:'EDIT',
-// 				payload:'测试一下对不对'
-	// 	       })
+	//  console.log(this.props)
+	//  this.props.dispatch({
+	// 				type:'EDIT',
+	// 				payload:'测试一下对不对'
+	// 			})
 	let {dispatch} = this.props
 		getCommentList().then(res=>{
 			dispatch( {
@@ -33,23 +33,23 @@ class Home extends Component {
     render() {
 		const {comments} = this.props.comments
 		const lists =	comments == null ?'': comments.map((item,index)=>{
-			return (
-				<div key={index}> 
-						<div>id: {item.id} </div>
-						<div>用户名: {item.name} </div>
-						<div> 邮箱:{item.email} </div>
-						<div>内容: 
-							<div className='content'>	{item.body} </div>	
-						</div>
-				</div>
-			    )
-		     })
+					return (
+									<div key={index}> 
+											<div>id: {item.id} </div>
+											<div>用户名: {item.name} </div>
+											<div> 邮箱:{item.email} </div>
+											<div>内容: 
+												<div className='content'>	{item.body} </div>	
+											</div>
+									</div>
+						 )
+				})
         return (
             <div className='home'>
-		 <h1>Home组件</h1>
-		 <Button type='primary' onClick={this.test.bind(this,123)}>  点我试下 </Button>
-		 <div>{lists}</div>
-	</div>
+							 <h1>Home组件</h1>
+							 <Button type='primary' onClick={this.test.bind(this,123)}>  点我试下 </Button>
+							 <div>{lists}</div>
+						</div>
         );
     }
 }

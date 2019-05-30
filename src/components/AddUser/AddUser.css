@@ -1,0 +1,15 @@
+.addUser{
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+.card{
+	width: 100%;
+	height: 820px;
+
+}
+.ant-form-item{
+	display: flex;
+}
+

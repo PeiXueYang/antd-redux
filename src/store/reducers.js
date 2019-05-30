@@ -32,5 +32,30 @@ const getComments = (state={
 				return state
 	 }
 }
-const totalReducers = combineReducers({item:postListReducer,counter:counterReducer,comments:getComments})
+
+let initState = {
+	 userList:[{
+			userName:"peipei",
+			phone:'18888880000',
+			email:'123@123.com',
+			address:'上海市',
+	 }]
+}
+
+const addUserReducer = (state =initState,action )=>{
+		
+	  if(action.type === 'ADD_USER'){
+			state.userList.push(action.payload)
+			 return  state
+
+		}
+		return state
+}
+
+const totalReducers = combineReducers({
+			item:postListReducer,
+			counter:counterReducer,
+			comments:getComments,
+			userList:addUserReducer,
+	})
 export default totalReducers;
